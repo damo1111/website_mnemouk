@@ -1,10 +1,21 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
-import LogoMarkURL from "./assets/mnemo-mark.svg";
+import Mark1x from "./assets/mnemo-mark.png";
+import Mark2x from "./assets/mnemo-mark@2x.png";
+import Mark4x from "./assets/mnemo-mark@4x.png";
 
 function LogoMark({ className = "h-7 w-auto" }) {
-  return <img src={LogoMarkURL + "?v=3"} alt="Mnemo logomark" className={className} height={28} style={{width:"auto",display:"block"}} />;
+  return (
+    <img
+      src={Mark1x}
+      srcSet={`${Mark1x}?v=4 1x, ${Mark2x || Mark1x}?v=4 2x, ${Mark4x || Mark1x}?v=4 4x`}
+      alt="Mnemo logomark"
+      className={className}
+      height={28}
+      style={{ width: "auto", objectFit: "contain", display: "block" }}
+    />
+  );
 }
 
 function LogoLockup({ size = "h-7" }){
@@ -76,7 +87,7 @@ export default function Site(){
 
       <section id="home" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
+          <motion.div initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} transition={{duration:0.5}}>
             <p className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-neutral-600 mb-3">
               <Sparkles size={14}/> Intelligence designed for humans
             </p>
@@ -87,7 +98,7 @@ export default function Site(){
               Mnemo develops intelligent systems that integrate into everyday tools and workflows. The aim is clarity, efficiency, and measurable outcomes, not noise.
             </p>
             <p className="mt-3 text-sm text-neutral-500">Built on Google Cloud, Vertex AI and Gemini.</p>
-          </div>
+          </motion.div>
 
           <motion.div initial={{opacity:0, y:10}} animate={{opacity:1, y:0}} transition={{duration:0.5, delay:0.05}} className="relative">
             <div className="w-full rounded-3xl border overflow-hidden shadow-sm grid place-items-center py-10">
@@ -189,12 +200,12 @@ export default function Site(){
       <section id="security" className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold">Security and privacy</h2>
-          <ul className="mt-4 list-disc pl-5 text-neutral-700 space-y-2 max-w-4xl">
-            <li>Data ownership remains with the customer. No training on private data without explicit consent.</li>
-            <li>PII minimised and encrypted at rest and in transit. Regional hosting on Google Cloud on request.</li>
-            <li>Granular source permissions. Each connector is opt in.</li>
-            <li>Audit trails for actions and model calls.</li>
-          </ul>
+        <ul className="mt-4 list-disc pl-5 text-neutral-700 space-y-2 max-w-4xl">
+          <li>Data ownership remains with the customer. No training on private data without explicit consent.</li>
+          <li>PII minimised and encrypted at rest and in transit. Regional hosting on Google Cloud on request.</li>
+          <li>Granular source permissions. Each connector is opt in.</li>
+          <li>Audit trails for actions and model calls.</li>
+        </ul>
         </div>
       </section>
 
