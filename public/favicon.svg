@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <rect x="3" y="3" width="58" height="58" rx="11" fill="none" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M16 46 V24 C16 22 18 20 20 20 C22 20 24 22 24 24 V34
+           C24 30 28 28 32 28 C36 28 40 32 40 36 C40 40 36 44 32 44
+           C28 44 24 40 24 36 V24 C24 22 26 20 28 20 C30 20 32 22 32 24 V46
+           M40 46 V20" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
