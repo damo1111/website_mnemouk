@@ -3,8 +3,19 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import LogoMarkURL from "./assets/mnemo-mark.svg";
 
+// src/MnemoSite.jsx
+import MarkSVG from "./assets/mnemo-mark.svg";
+
 function LogoMark({ className = "h-7 w-auto" }) {
-  return <img src={LogoMarkURL + "?v=3"} alt="Mnemo logomark" className={className} height={28} style={{width:"auto",display:"block"}} />;
+  return (
+    <img
+      src={MarkSVG + "?v=5"}
+      alt="Mnemo logomark"
+      className={className}
+      height={28}
+      style={{ width: "auto", objectFit: "contain", display: "block" }}
+    />
+  );
 }
 
 function LogoLockup({ size = "h-7" }){
