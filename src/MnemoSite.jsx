@@ -3,8 +3,49 @@ import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import LogoMarkURL from "./assets/mnemo-mark.svg";
 
-function LogoMark({ className = "h-7 w-auto" }) {
-  return <img src={LogoMarkURL + "?v=3"} alt="Mnemo logomark" className={className} height={28} style={{width:"auto",display:"block"}} />;
+function LogoMark({ className = "h-28 w-auto" }) {
+  return (
+    <svg
+      viewBox="0 0 1000 1000"
+      aria-label="Mnemo logomark"
+      className={className}
+      style={{ display: "block" }}
+    >
+      <rect x="80" y="80" width="840" height="840" rx="180"
+            fill="none" stroke="#111111" strokeWidth="90" strokeLinejoin="round" />
+      <path d="
+        M 300 720 V 360
+        C 300 318 334 290 374 290
+        C 414 290 448 318 448 360 V 540
+
+        C 448 486 496 440 556 440
+        C 616 440 664 488 664 548
+        C 664 608 616 656 556 656
+        C 496 656 448 608 448 548
+
+        V 360
+        C 448 318 482 290 522 290
+        C 562 290 596 318 596 360 V 720
+
+        M 704 720 V 360
+        C 704 318 738 290 778 290
+        C 818 290 852 318 852 360 V 720"
+        fill="none" stroke="#111111" strokeWidth="90"
+        strokeLinecap="round" strokeLinejoin="round"
+      />
+      <path d="
+        M 556 498
+        C 592 498 622 528 622 564
+        C 622 600 592 630 556 630
+        C 520 630 490 600 490 564
+        C 490 540 504 520 522 508
+        C 540 496 544 486 556 470
+        C 568 486 572 496 590 508
+        C 608 520 622 540 622 564 Z"
+        fill="#111111"
+      />
+    </svg>
+  );
 }
 
 function LogoLockup({ size = "h-7" }){
