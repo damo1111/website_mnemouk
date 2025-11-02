@@ -6,7 +6,7 @@ import { Activity, Cpu, Eye, Lock, Shield, Mail } from "lucide-react";
 function Logo({ className = "h-7 w-auto" }) {
   return (
     <img
-      src={"/mnemo-mark.png?v=10"}
+      src={"/mnemo-mark-20251102.png?v=10"}
       alt="Mnemo"
       className={className}
       height={28}
