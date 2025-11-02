@@ -1,3 +1,3 @@
-import React from 'react';
-import MnemoSite from './MnemoSite.jsx';
-export default function App(){return <MnemoSite/>}
+import React from "react";
+import Site from "./MnemoSite.jsx";
+export default function App(){ return <Site/>; }
