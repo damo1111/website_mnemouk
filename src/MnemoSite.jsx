@@ -230,7 +230,7 @@ export default function MnemoSite() {
       Additional contributors in cognitive research and data science are engaged under NDA during early development.
     </p>
     <p className="text-sm text-neutral-600 mt-2">
-      <a href="https://www.linkedin.com/in/davidmoritzuk/" className="underline hover:opacity-70">
+      <a href="https://www.linkedin.com/in/damoritz/" className="underline hover:opacity-70">
         David Moritz
       </a> — Product & Machine Learning
     </p>
