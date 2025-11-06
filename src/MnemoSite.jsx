@@ -74,56 +74,45 @@ export default function MnemoSite() {
       </header>
 
       {/* Hero */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          style={{ opacity: heroOpacity, y: heroY }}
-        >
-          <p className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-neutral-600 mb-3">
-            Intelligence for the human signal
-          </p>
-          <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
-            Intelligence that understands you, not your clicks
-          </h1>
-          <p className="mt-4 text-neutral-800 text-lg">
-            We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
-          </p>
+<section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+  <motion.div
+    initial={{ opacity: 0, y: 14 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut" }}
+    style={{ opacity: heroOpacity, y: heroY }}
+  >
+    <p className="inline-flex items-center gap-2 text-xs uppercase tracking-wide text-neutral-600 mb-3">
+      Intelligence for the human signal
+    </p>
+    <h1 className="text-4xl sm:text-5xl font-semibold leading-tight">
+      Intelligence that understands you, not your clicks
+    </h1>
+    <p className="mt-4 text-neutral-800 text-lg">
+      We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
+    </p>
 
-          @@
--          <p className="mt-4 text-neutral-800 text-lg">
--            We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
--          </p>
-+          <p className="mt-4 text-neutral-800 text-lg">
-+            We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
-+          </p>
-+
-+          <p className="mt-3 text-neutral-700">
-+            Mnemo builds adaptive AI from wearable and spatial signals. We model human state such as focus, fatigue and cognitive load so products can respond at the right time with the right presence. Our audience is product teams, researchers and developers building wellbeing, productivity and assistive experiences.
-+          </p>
-@@
--          <motion.div
-+          <motion.div
-             initial={{ opacity: 0, scale: 0.98 }}
+    {/* New business summary paragraph */}
+    <p className="mt-3 text-neutral-700">
+      Mnemo builds adaptive AI from wearable and spatial signals. We model human state such as focus, fatigue and cognitive load so products can respond at the right time with the right presence. Our audience is product teams, researchers and developers building wellbeing, productivity and assistive experiences.
+    </p>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-            className="mt-10 rounded-3xl border overflow-hidden shadow-sm grid place-items-center py-10"
-            style={{
-              backgroundImage:
-                "radial-gradient(1200px 400px at 50% 0%, rgba(0,0,0,0.06), rgba(0,0,0,0))"
-            }}
-          >
-            <div className="flex flex-col items-center gap-4">
-              <Logo className="h-[96px] md:h-[112px] w-auto" />
-              <span className="font-semibold text-2xl md:text-3xl tracking-tight">Mnemo</span>
-            </div>
-          </motion.div>
-        </motion.div>
-      </section>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.98 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+      className="mt-10 rounded-3xl border overflow-hidden shadow-sm grid place-items-center py-10"
+      style={{
+        backgroundImage:
+          "radial-gradient(1200px 400px at 50% 0%, rgba(0,0,0,0.06), rgba(0,0,0,0))"
+      }}
+    >
+      <div className="flex flex-col items-center gap-4">
+        <Logo className="h-[96px] md:h-[112px] w-auto" />
+        <span className="font-semibold text-2xl md:text-3xl tracking-tight">Mnemo</span>
+      </div>
+    </motion.div>
+  </motion.div>
+</section>
 
       {/* Premise */}
       <section id="premise" className="bg-neutral-50 py-16">
