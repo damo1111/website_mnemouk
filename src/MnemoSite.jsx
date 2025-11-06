@@ -218,7 +218,8 @@ export default function MnemoSite() {
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <h2 className="text-2xl font-semibold">Team</h2>
     <p className="mt-4 text-neutral-800 max-w-3xl">
-      Mnemo is led by an experienced product and machine learning specialist from large-scale consumer platforms and applied AI. Additional contributors in data science and cognitive research are currently engaged under NDA.
+      Mnemo is led by <strong>David Moritz</strong>, a product and machine learning specialist with experience scaling applied AI and consumer systems in global tech environments. 
+      Additional contributors in data science and cognitive research are engaged under NDA while early development continues.
     </p>
     <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
       <a href="https://www.linkedin.com/company/mnemo-labs/" className="rounded-2xl border p-5 bg-white no-underline hover:opacity-80">
@@ -230,7 +231,9 @@ export default function MnemoSite() {
         <div className="text-xs text-neutral-500 mt-1">Selected repos and SDKs (as released)</div>
       </a>
     </div>
-    <p className="text-xs text-neutral-500 mt-3">Individual profiles available under NDA for diligence.</p>
+    <p className="text-xs text-neutral-500 mt-3">
+      Individual profiles available under NDA for diligence. This page will be updated as additional contributors are announced.
+    </p>
   </div>
 </section>
 
