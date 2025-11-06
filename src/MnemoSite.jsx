@@ -190,36 +190,49 @@ export default function MnemoSite() {
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <h2 className="text-2xl font-semibold">Product</h2>
     <p className="mt-4 text-neutral-800 max-w-3xl">
-      <strong>Mnemo Core</strong> is a cognitive AI layer for wearables and spatial devices. It interprets accelerometer and biometric signals to estimate cognitive state (focus, fatigue, calm) and exposes those insights via simple APIs and client SDKs.
+      Mnemo develops an adaptive intelligence layer for wearables and spatial systems. It transforms sensor data—motion, biometrics and environmental context—into an understanding of cognitive state and intent. 
+      The technology enables products to anticipate needs and adjust behaviour naturally across devices.
     </p>
+
+    <p className="mt-4 text-neutral-800 max-w-3xl">
+      Founded by a product leader with experience in large-scale consumer platforms, Mnemo applies practical design discipline to advanced ML research. 
+      The first product, <strong>Mnemo Core</strong>, provides SDKs and APIs that allow apps to interpret focus, fatigue and cognitive load in real time while preserving privacy.
+    </p>
+
     <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
       <div className="rounded-2xl border p-5 bg-white">
-        <strong>What we’re building</strong><br/>
-        Signal processing + state estimation + lightweight reasoning. SDKs for Swift (on-device) and Python (cloud via Vertex AI).
-      </div>
-      <div className="rounded-2xl border p-5 bg-white">
         <strong>Stage</strong><br/>
-        R&amp;D / MVP prototyping (SEIS-backed), private evaluations in progress.
+        Early R&amp;D and MVP prototyping under SEIS advance assurance. Internal demos active, pilot integrations planned.
       </div>
       <div className="rounded-2xl border p-5 bg-white">
-        <strong>What users can expect</strong><br/>
-        Local-first where possible, explicit privacy controls, clear retention policies.
+        <strong>Use cases</strong><br/>
+        Wellbeing, productivity and assistive applications where user context matters more than clicks.
       </div>
       <div className="rounded-2xl border p-5 bg-white">
-        <strong>Demos</strong><br/>
-        Screenshots and short demo clips available on request. Public samples will be posted here.
+        <strong>Technology</strong><br/>
+        Vertex AI, Core ML and private cloud orchestration with local-first processing and explicit consent layers.
+      </div>
+      <div className="rounded-2xl border p-5 bg-white">
+        <strong>Current focus</strong><br/>
+        Refining state-detection accuracy and developer SDK ergonomics for Apple and Google ecosystems.
       </div>
     </div>
   </div>
 </section>
+
 
 {/* Team */}
 <section id="team" className="py-16">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <h2 className="text-2xl font-semibold">Team</h2>
     <p className="mt-4 text-neutral-800 max-w-3xl">
-      Mnemo is led by <strong>David Moritz</strong>, a product and machine learning specialist with experience scaling applied AI and consumer systems in global tech environments. 
-      Additional contributors in data science and cognitive research are engaged under NDA while early development continues.
+      Mnemo is led by <strong>David Moritz</strong>, a product and machine learning specialist with experience scaling applied AI and consumer systems in global technology companies. 
+      Additional contributors in cognitive research and data science are engaged under NDA during early development.
+    </p>
+    <p className="text-sm text-neutral-600 mt-2">
+      <a href="https://www.linkedin.com/in/davidmoritzuk/" className="underline hover:opacity-70">
+        David Moritz
+      </a> — Product & Machine Learning
     </p>
     <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
       <a href="https://www.linkedin.com/company/mnemo-labs/" className="rounded-2xl border p-5 bg-white no-underline hover:opacity-80">
@@ -232,7 +245,7 @@ export default function MnemoSite() {
       </a>
     </div>
     <p className="text-xs text-neutral-500 mt-3">
-      Individual profiles available under NDA for diligence. This page will be updated as additional contributors are announced.
+      Individual profiles available under NDA for diligence. This section will be updated as additional contributors are announced.
     </p>
   </div>
 </section>
