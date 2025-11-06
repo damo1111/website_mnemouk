@@ -67,9 +67,11 @@ export default function MnemoSite() {
             <a href="#premise" className="no-underline hover:opacity-70">Premise</a>
             <a href="#idea" className="no-underline hover:opacity-70">Idea</a>
             <a href="#approach" className="no-underline hover:opacity-70">Approach</a>
+            <a href="#product" className="no-underline hover:opacity-70">Product</a>
+            <a href="#team" className="no-underline hover:opacity-70">Team</a>
             <a href="#stack" className="no-underline hover:opacity-70">Stack</a>
             <a href="#contact" className="no-underline hover:opacity-70">Contact</a>
-          </div>
+</div>
         </nav>
       </header>
 
@@ -183,6 +185,56 @@ export default function MnemoSite() {
         </div>
       </section>
 
+{/* Product */}
+<section id="product" className="bg-neutral-50 py-16">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold">Product</h2>
+    <p className="mt-4 text-neutral-800 max-w-3xl">
+      <strong>Mnemo Core</strong> is a cognitive AI layer for wearables and spatial devices. It interprets accelerometer and biometric signals to estimate cognitive state (focus, fatigue, calm) and exposes those insights via simple APIs and client SDKs.
+    </p>
+    <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
+      <div className="rounded-2xl border p-5 bg-white">
+        <strong>What we’re building</strong><br/>
+        Signal processing + state estimation + lightweight reasoning. SDKs for Swift (on-device) and Python (cloud via Vertex AI).
+      </div>
+      <div className="rounded-2xl border p-5 bg-white">
+        <strong>Stage</strong><br/>
+        R&amp;D / MVP prototyping (SEIS-backed), private evaluations in progress.
+      </div>
+      <div className="rounded-2xl border p-5 bg-white">
+        <strong>What users can expect</strong><br/>
+        Local-first where possible, explicit privacy controls, clear retention policies.
+      </div>
+      <div className="rounded-2xl border p-5 bg-white">
+        <strong>Demos</strong><br/>
+        Screenshots and short demo clips available on request. Public samples will be posted here.
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* Team */}
+<section id="team" className="py-16">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold">Team</h2>
+    <p className="mt-4 text-neutral-800 max-w-3xl">
+      Mnemo is led by an experienced product and machine learning specialist from large-scale consumer platforms and applied AI. Additional contributors in data science and cognitive research are currently engaged under NDA.
+    </p>
+    <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
+      <a href="https://www.linkedin.com/company/mnemo-labs/" className="rounded-2xl border p-5 bg-white no-underline hover:opacity-80">
+        LinkedIn company page
+        <div className="text-xs text-neutral-500 mt-1">Public updates and team information</div>
+      </a>
+      <a href="https://gitlab.com/mnemouk" className="rounded-2xl border p-5 bg-white no-underline hover:opacity-80">
+        GitLab organisation
+        <div className="text-xs text-neutral-500 mt-1">Selected repos and SDKs (as released)</div>
+      </a>
+    </div>
+    <p className="text-xs text-neutral-500 mt-3">Individual profiles available under NDA for diligence.</p>
+  </div>
+</section>
+
+
       {/* Stack */}
       <section id="stack" className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -234,9 +286,9 @@ export default function MnemoSite() {
 
       {/* Footer */}
       <footer className="border-t py-10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm text-neutral-600">
-          © {new Date().getFullYear()} Mnemo. All rights reserved.
-        </div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm text-neutral-600">
+  © {new Date().getFullYear()} Mnemo Labs Ltd · <a href="https://www.linkedin.com/company/mnemo-labs/" className="underline hover:opacity-70">LinkedIn</a> · <a href="mailto:info@mnemo.uk" className="underline hover:opacity-70">info@mnemo.uk</a>
+      </div>
       </footer>
     </div>
   );
