@@ -91,6 +91,22 @@ export default function MnemoSite() {
             We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
           </p>
 
+          @@
+-          <p className="mt-4 text-neutral-800 text-lg">
+-            We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
+-          </p>
++          <p className="mt-4 text-neutral-800 text-lg">
++            We build context-aware AI that interprets the subtle data streams from wearables and spatial devices. Mnemo turns raw signal into awareness, and awareness into useful action.
++          </p>
++
++          <p className="mt-3 text-neutral-700">
++            Mnemo builds adaptive AI from wearable and spatial signals. We model human state such as focus, fatigue and cognitive load so products can respond at the right time with the right presence. Our audience is product teams, researchers and developers building wellbeing, productivity and assistive experiences.
++          </p>
+@@
+-          <motion.div
++          <motion.div
+             initial={{ opacity: 0, scale: 0.98 }}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
