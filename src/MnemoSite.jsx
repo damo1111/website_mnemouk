@@ -116,8 +116,6 @@ export default function MnemoSite() {
   </motion.div>
 </section>
 
-</section>
-
 {/* Overview */}
 <section id="overview" className="bg-neutral-50 py-16">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
