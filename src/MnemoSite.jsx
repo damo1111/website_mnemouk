@@ -306,6 +306,9 @@ export default function MnemoSite() {
       {/* Contact */}
       <section id="contact" className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              {/* ...contact content... */}
+        </div>
+      </section> 
           <Reveal><h2 className="text-2xl font-semibold">Contact</h2></Reveal>
           <Reveal delay={0.05}>
             <p className="mt-2 text-neutral-800">If you’re working at the intersection of AI, cognition and behaviour, we would like to talk.</p>
