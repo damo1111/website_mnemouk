@@ -116,6 +116,24 @@ export default function MnemoSite() {
   </motion.div>
 </section>
 
+</section>
+
+{/* Overview */}
+<section id="overview" className="bg-neutral-50 py-16">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold">Overview</h2>
+    <p className="mt-4 text-neutral-800 max-w-3xl">
+      Mnemo is a technology startup developing adaptive intelligence from wearable and spatial signals. Our systems model human cognitive state—focus, fatigue and load—so digital experiences can adapt intelligently to people, not just interactions. 
+    </p>
+    <p className="mt-3 text-neutral-800 max-w-3xl">
+      We’re building an SDK and API platform for developers creating wellbeing, productivity and assistive tools across iOS, visionOS and other edge devices. Our goal is to make intelligence feel calm, contextual and privacy-first.
+    </p>
+  </div>
+</section>
+
+{/* Premise */}
+<section id="premise" className="bg-neutral-50 py-16">
+
       {/* Premise */}
       <section id="premise" className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -186,37 +204,42 @@ export default function MnemoSite() {
       </section>
 
 {/* Product */}
-<section id="product" className="bg-neutral-50 py-16">
+<section id="product" className="py-16">
   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <h2 className="text-2xl font-semibold">Product</h2>
     <p className="mt-4 text-neutral-800 max-w-3xl">
-      Mnemo develops an adaptive intelligence layer for wearables and spatial systems. It transforms sensor data—motion, biometrics and environmental context—into an understanding of cognitive state and intent. 
-      The technology enables products to anticipate needs and adjust behaviour naturally across devices.
+      Mnemo Core is our first product — a developer SDK and cloud API for interpreting sensor data from wearables and spatial devices into meaningful cognitive signals. It allows applications to estimate focus, fatigue and engagement in real time.
+    </p>
+    <p className="mt-3 text-neutral-800 max-w-3xl">
+      The system combines on-device processing (Core ML) and secure cloud inference (Vertex AI + Gemini) to model user state while preserving privacy. Developers can subscribe to contextual events through a simple API rather than building their own complex models.
+    </p>
+    <p className="mt-3 text-neutral-800 max-w-3xl">
+      Our platform is currently in the R&amp;D and MVP prototyping stage, operating under SEIS advance assurance with planned pilot partners in Q1 2026.
     </p>
 
-    <p className="mt-4 text-neutral-800 max-w-3xl">
-      Founded by a product leader with experience in large-scale consumer platforms, Mnemo applies practical design discipline to advanced ML research. 
-      The first product, <strong>Mnemo Core</strong>, provides SDKs and APIs that allow apps to interpret focus, fatigue and cognitive load in real time while preserving privacy.
-    </p>
-
-    <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
-      <div className="rounded-2xl border p-5 bg-white">
-        <strong>Stage</strong><br/>
-        Early R&amp;D and MVP prototyping under SEIS advance assurance. Internal demos active, pilot integrations planned.
+    <div className="mt-10 grid md:grid-cols-3 gap-6">
+      <div className="rounded-2xl border overflow-hidden bg-white">
+        <img src="/assets/demo-dashboard-placeholder.png" alt="Mnemo Dashboard" className="w-full" />
+        <div className="p-4 text-sm text-neutral-700">
+          Prototype dashboard visualising cognitive state in real time.
+        </div>
       </div>
-      <div className="rounded-2xl border p-5 bg-white">
-        <strong>Use cases</strong><br/>
-        Wellbeing, productivity and assistive applications where user context matters more than clicks.
+      <div className="rounded-2xl border overflow-hidden bg-white">
+        <img src="/assets/sdk-placeholder.png" alt="Mnemo SDK" className="w-full" />
+        <div className="p-4 text-sm text-neutral-700">
+          Early SDK structure for iOS and Python integration.
+        </div>
       </div>
-      <div className="rounded-2xl border p-5 bg-white">
-        <strong>Technology</strong><br/>
-        Vertex AI, Core ML and private cloud orchestration with local-first processing and explicit consent layers.
-      </div>
-      <div className="rounded-2xl border p-5 bg-white">
-        <strong>Current focus</strong><br/>
-        Refining state-detection accuracy and developer SDK ergonomics for Apple and Google ecosystems.
+      <div className="rounded-2xl border overflow-hidden bg-white">
+        <img src="/assets/api-endpoint-placeholder.png" alt="Mnemo API" className="w-full" />
+        <div className="p-4 text-sm text-neutral-700">
+          Example endpoint returning real-time focus and fatigue scores.
+        </div>
       </div>
     </div>
+    <p className="text-xs text-neutral-500 mt-3">
+      Demos represent active prototypes; full product launch is in preparation.
+    </p>
   </div>
 </section>
 
