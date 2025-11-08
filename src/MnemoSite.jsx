@@ -122,15 +122,25 @@ export default function MnemoSite() {
       </section>
 
       {/* Premise */}
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal><h2 className="text-2xl font-semibold">The premise</h2></Reveal>
-          <div className="mt-4 grid md:grid-cols-3 gap-6 text-neutral-800">
-            <Reveal><p>Your devices sense how you move, breathe and react. They rarely understand what it means.</p></Reveal>
-            <Reveal delay={0.05}><p>Mnemo reads motion, biometrics and context to model state and intent in real time. The system responds to how you feel and move, not only what you tap.</p></Reveal>
-            <Reveal delay={0.1}><p>That keeps interactions quiet and useful. Help appears at the right time and steps back when done.</p></Reveal>
-          </div>
-        </div>
-      </section>
+<section id="premise" className="bg-neutral-50 py-16">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <Reveal>
+      <h2 className="text-2xl font-semibold">The premise</h2>
+    </Reveal>
+
+    <div className="mt-4 grid md:grid-cols-3 gap-6 text-neutral-800">
+      <Reveal>
+        <p>Your devices already sense how you move, breathe and react. They just don’t understand what any of it means.</p>
+      </Reveal>
+      <Reveal delay={0.05}>
+        <p>Mnemo reads motion, biometrics and context to model state and intent in real time. The system responds to how you feel and move, not just what you tap.</p>
+      </Reveal>
+      <Reveal delay={0.1}>
+        <p>That makes interactions quieter, faster and more human. Help arrives at the right time and disappears when it’s done.</p>
+      </Reveal>
+    </div>
+  </div>
+</section>
 
       {/* Idea */}
       <section id="idea" className="py-16">
