@@ -122,7 +122,6 @@ export default function MnemoSite() {
       </section>
 
       {/* Premise */}
-      <section id="premise" className="bg-neutral-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal><h2 className="text-2xl font-semibold">The premise</h2></Reveal>
           <div className="mt-4 grid md:grid-cols-3 gap-6 text-neutral-800">
@@ -200,15 +199,15 @@ export default function MnemoSite() {
 
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border overflow-hidden bg-white">
-              <img src="/assets/demo-dashboard.png" alt="Mnemo Dashboard" className="w-full" />
+              <img src="/assets/demo-dashboard-light.png" alt="Mnemo Dashboard" className="w-full" />
               <div className="p-4 text-sm text-neutral-700">Prototype dashboard that visualises cognitive state.</div>
             </div>
             <div className="rounded-2xl border overflow-hidden bg-white">
-              <img src="/assets/sdk-snippet.png" alt="Mnemo SDK" className="w-full" />
+              <img src="/assets/sdk-snippet-light.png" alt="Mnemo SDK" className="w-full" />
               <div className="p-4 text-sm text-neutral-700">Early SDK sketch for iOS and Python integration.</div>
             </div>
             <div className="rounded-2xl border overflow-hidden bg-white">
-              <img src="/assets/api-response.png" alt="Mnemo API" className="w-full" />
+              <img src="/assets/api-response-light.png" alt="Mnemo API" className="w-full" />
               <div className="p-4 text-sm text-neutral-700">Example API response for focus and fatigue.</div>
             </div>
           </div>
