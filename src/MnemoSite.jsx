@@ -340,7 +340,7 @@ export default function MnemoSite() {
             building large scale consumer and applied AI systems at{" "}
             <strong>
               {" "}
-              Just Eat Takeaway, Country Road Group and David Jones
+              Zoopla, Tesco, Amazon
             </strong>
             . His work has spanned personalisation, behavioural modelling,
             search and platform architecture across multiple markets.
