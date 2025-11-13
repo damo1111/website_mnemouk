@@ -340,7 +340,7 @@ export default function MnemoSite() {
             building large scale consumer and applied AI systems at{" "}
             <strong>
               {" "}
-              Zoopla, Tesco, Amazon
+              Zoopla, Tesco & Amazon to name a few
             </strong>
             . His work has spanned personalisation, behavioural modelling,
             search and platform architecture across multiple markets.
