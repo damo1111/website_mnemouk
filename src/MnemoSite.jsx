@@ -245,6 +245,45 @@ export default function MnemoSite() {
         </div>
       </section>
 
+{/* Use Cases */}
+<section id="usecases" className="py-16 bg-white">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <h2 className="text-2xl font-semibold">Use cases</h2>
+
+    <p className="mt-4 text-neutral-800 max-w-3xl">
+      Mnemo’s cognitive signal layer enables applications to adapt in real time to a person’s state — creating more supportive, efficient and context-aware digital experiences across wellbeing, productivity and assistive technology.
+    </p>
+
+    <div className="mt-10 grid md:grid-cols-3 gap-6">
+
+      {/* Use Case 1 */}
+      <div className="rounded-2xl border p-6 bg-neutral-50">
+        <h3 className="font-semibold text-lg">Wellbeing & fatigue detection</h3>
+        <p className="mt-2 text-neutral-700 text-sm">
+          Applications can detect rising cognitive load or early fatigue patterns from motion and heart-rate variability. Interventions like micro-breaks or guided breathing can be timed precisely when the user needs them.
+        </p>
+      </div>
+
+      {/* Use Case 2 */}
+      <div className="rounded-2xl border p-6 bg-neutral-50">
+        <h3 className="font-semibold text-lg">Adaptive productivity timing</h3>
+        <p className="mt-2 text-neutral-700 text-sm">
+          Productivity tools can adjust task prompts, focus modes and notifications based on the user’s actual state — for example delaying interruptions when focus is high or offering assistance when momentum drops.
+        </p>
+      </div>
+
+      {/* Use Case 3 */}
+      <div className="rounded-2xl border p-6 bg-neutral-50">
+        <h3 className="font-semibold text-lg">Assistive and accessibility support</h3>
+        <p className="mt-2 text-neutral-700 text-sm">
+          Cognitive state estimation can support users with attention, memory or sensory needs, enabling systems that respond more gently and predictably to overwhelm, stress or cognitive overload.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
       {/* Product */}
       <section id="product" className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
