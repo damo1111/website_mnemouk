@@ -133,11 +133,7 @@ export default function MnemoSite() {
             to people, not just interactions.
           </p>
           <p className="mt-3 text-neutral-800 max-w-3xl">
-            We are building an SDK and API for developers who create wellbeing,
-            productivity and assistive tools across iOS, visionOS and other edge
-            devices. Mnemo is a B2B SaaS platform, offered as a subscription SDK
-            and usage based API. We build proprietary software only and do not
-            operate as an agency or consulting service.
+          Mnemo is formally recognised as an early-stage technology company through SEIS Advance Assurance, validating our R&amp;D direction and product development plans.
           </p>
         </div>
       </section>
@@ -374,9 +370,8 @@ export default function MnemoSite() {
             </a>
           </div>
           <p className="text-xs text-neutral-500 mt-3">
-            Additional contributors in cognitive science and data research are
-            active under NDA during early development. Profiles will be
-            published as roles become public.
+          Mnemo Labs Ltd holds SEIS Advance Assurance. Individual profiles available under NDA for diligence. This section will be updated as contributors are announced.
+          </p>
           </p>
         </div>
       </section>
@@ -421,10 +416,7 @@ export default function MnemoSite() {
           </Reveal>
           <Reveal delay={0.05}>
             <p className="mt-4 text-neutral-800 max-w-3xl">
-              Active R&amp;D with SEIS advance assurance. Prototypes combine
-              multimodal sensing and adaptive reasoning to detect focus and load
-              and adjust assistance in real time. Pilot integrations will run
-              with selected partners before broader release.
+            Mnemo Labs Ltd is SEIS Advance Assurance approved, supporting our formal R&amp;D programme. Current prototypes combine multimodal sensing with adaptive reasoning to detect focus, fatigue and cognitive load, adjusting system behaviour in real time.
             </p>
           </Reveal>
         </div>
