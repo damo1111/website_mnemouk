@@ -363,31 +363,24 @@ export default function MnemoSite() {
           </p>
         </div>
       </section>
-
-      {/* Team */}
-      <section id="team" className="py-16">
+     
+          {/* Team */}
+          <section id="team" className="py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-semibold">Team</h2>
           <p className="mt-4 text-neutral-800 max-w-3xl">
-            Mnemo is led by{" "}
-            <strong>David Moritz — Founder and Product Lead</strong>, an
-            experienced product and machine learning leader with a background
-            building large scale consumer and applied AI systems at{" "}
-            <strong>
-              {" "}
-              Zoopla, Tesco & Amazon to name a few
-            </strong>
-            . His work has spanned personalisation, behavioural modelling,
-            search and platform architecture across multiple markets.
+            Mnemo is led by <strong>David Moritz</strong>, product and applied machine learning, with experience shipping large scale systems in consumer technology companies including Just Eat Takeaway.com and Country Road Group. Additional contributors in cognitive research and data science are engaged under NDA during early development.
           </p>
           <p className="text-sm text-neutral-600 mt-2">
             <a
               href="https://www.linkedin.com/in/damoritz/"
               className="underline hover:opacity-70"
             >
-              LinkedIn — David Moritz
-            </a>
+              David Moritz
+            </a>{" "}
+            — Product and ML
           </p>
+
           <div className="mt-6 grid md:grid-cols-2 gap-4 text-neutral-800">
             <a
               href="https://www.linkedin.com/company/mnemo-labs/"
@@ -408,9 +401,9 @@ export default function MnemoSite() {
               </div>
             </a>
           </div>
+
           <p className="text-xs text-neutral-500 mt-3">
-          Mnemo Labs Ltd holds SEIS Advance Assurance. Individual profiles available under NDA for diligence. This section will be updated as contributors are announced.
-          </p>
+            Mnemo Labs Ltd holds SEIS Advance Assurance. Individual profiles are available under NDA for diligence. This section will be updated as contributors are announced.
           </p>
         </div>
       </section>
