@@ -324,8 +324,8 @@ export default function MnemoSite() {
             running on test and pilot data. Design partner pilots are planned
             for Q1 2026 under SEIS advance assurance.
           </p>
+          
           <div className="mt-10">
- 
   <video 
     src="/assets/product-demo.mp4"
     className="w-full rounded-2xl border"
