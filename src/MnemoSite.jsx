@@ -330,10 +330,11 @@ export default function MnemoSite() {
     src="/assets/product-demo.mp4"
     className="w-full rounded-2xl border"
     controls
-    poster="/assets/demo-dashboard-light.png"
+    preload="metadata"
+    poster="/assets/product-demo-poster.png"
   />
   <p className="text-xs text-neutral-500 mt-2">
-    Short demo video showing the Mnemo Core prototype.
+    Demo video showing the Mnemo Core prototype.
   </p>
 
 </div>
