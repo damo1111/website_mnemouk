@@ -324,7 +324,19 @@ export default function MnemoSite() {
             running on test and pilot data. Design partner pilots are planned
             for Q1 2026 under SEIS advance assurance.
           </p>
+          <div className="mt-10">
+ 
+  <video 
+    src="/assets/product-demo.mp4"
+    className="w-full rounded-2xl border"
+    controls
+    poster="/assets/demo-dashboard-light.png"
+  />
+  <p className="text-xs text-neutral-500 mt-2">
+    Short demo video showing the Mnemo Core prototype.
+  </p>
 
+</div>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border overflow-hidden bg-white">
               <img
