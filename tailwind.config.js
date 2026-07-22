@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: "#F6F8FC",
+        bg: "#FBFCFE",
         surface: "#FFFFFF",
-        border: "#E3E9F2",
-        "border-light": "#D2DBEA",
-        text: "#0E1524",
-        muted: "#5B6884",
+        border: "#E8EDF5",
+        "border-light": "#D8E0EE",
+        text: "#33405E",
+        muted: "#7C89A4",
         blue: "#2F6DB0",
         "blue-dim": "#7EA8D8",
         purple: "#6A5AD1",

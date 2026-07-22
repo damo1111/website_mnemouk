@@ -54,10 +54,10 @@ export default function SignalWave({ className = "" }) {
     >
       <defs>
         <linearGradient id={gradId} x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#F6F8FC" stopOpacity="1" />
-          <stop offset="12%" stopColor="#F6F8FC" stopOpacity="0" />
-          <stop offset="88%" stopColor="#F6F8FC" stopOpacity="0" />
-          <stop offset="100%" stopColor="#F6F8FC" stopOpacity="1" />
+          <stop offset="0%" stopColor="#FBFCFE" stopOpacity="1" />
+          <stop offset="12%" stopColor="#FBFCFE" stopOpacity="0" />
+          <stop offset="88%" stopColor="#FBFCFE" stopOpacity="0" />
+          <stop offset="100%" stopColor="#FBFCFE" stopOpacity="1" />
         </linearGradient>
         <mask id={`${gradId}-mask`}>
           <rect width={width} height={height} fill="white" />
