@@ -40,7 +40,7 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="mt-6 max-w-[14ch] font-display text-[52px] font-light italic leading-[1.05] text-text text-glow md:text-[88px]"
+          className="mt-6 max-w-[15ch] font-display text-[48px] font-light leading-[1.04] tracking-tight text-text text-glow md:text-[84px]"
         >
           Intelligence that understands you, not your clicks.
         </motion.h1>

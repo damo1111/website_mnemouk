@@ -35,7 +35,7 @@ export default function ProductCard({ product }) {
   const copy = (
     <div className="flex flex-1 flex-col items-start justify-center">
       <Tag>{product.tag}</Tag>
-      <h3 className="mt-6 font-display text-4xl font-light text-text">
+      <h3 className="mt-6 font-display text-4xl font-light tracking-tight text-text">
         {product.name}
       </h3>
       <p className="mt-4 max-w-[440px] font-body text-base leading-relaxed text-muted">

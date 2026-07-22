@@ -128,7 +128,7 @@ export default function Technology() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.05 }}
             viewport={{ once: true, amount: 0.4 }}
-            className="mt-4 font-display text-4xl font-light leading-tight text-text md:text-[56px]"
+            className="mt-4 font-display text-4xl font-light leading-tight tracking-tight text-text md:text-[52px]"
           >
             The human signal layer.
           </motion.h2>

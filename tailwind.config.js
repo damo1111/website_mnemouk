@@ -16,7 +16,7 @@ export default {
         signal: "#0E9E86",
       },
       fontFamily: {
-        display: ["Fraunces", "Georgia", "serif"],
+        display: ["Space Grotesk", "system-ui", "sans-serif"],
         body: ["Inter", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },

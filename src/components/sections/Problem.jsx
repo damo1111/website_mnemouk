@@ -34,7 +34,7 @@ export default function Problem() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.05 }}
         viewport={{ once: true, amount: 0.4 }}
-        className="mt-6 font-display text-3xl font-light italic leading-tight text-text text-glow md:text-[56px]"
+        className="mt-6 font-display text-3xl font-light leading-tight tracking-tight text-text text-glow md:text-[52px]"
       >
         “Current AI responds to what you type. We respond to who you are.”
       </motion.h2>

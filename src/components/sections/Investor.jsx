@@ -23,7 +23,7 @@ export default function Investor() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <p className="font-mono text-[11px] tracking-widest text-blue">INVEST</p>
-          <h2 className="mt-4 font-display text-4xl font-light leading-tight text-text md:text-[48px]">
+          <h2 className="mt-4 font-display text-4xl font-light leading-tight tracking-tight text-text md:text-[48px]">
             Early stage.
             <br />
             SEIS approved.

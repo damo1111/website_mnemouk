@@ -11,7 +11,7 @@ export default function Contact() {
         viewport={{ once: true, amount: 0.3 }}
         className="text-center"
       >
-        <h2 className="font-display text-5xl font-light italic text-text text-glow md:text-[64px]">
+        <h2 className="font-display text-5xl font-light tracking-tight text-text text-glow md:text-[64px]">
           Get in touch.
         </h2>
         <p className="mx-auto mt-6 max-w-md font-body text-base text-muted">
