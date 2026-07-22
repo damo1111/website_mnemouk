@@ -2,14 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
-::selection { @apply bg-neutral-900 text-white; }
-a { @apply underline underline-offset-2 decoration-neutral-300 hover:decoration-neutral-500; }
-.section { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
-.kicker { @apply inline-flex items-center gap-2 text-xs uppercase tracking-wide text-neutral-600; }
-.h1 { @apply text-4xl sm:text-5xl font-semibold leading-tight; }
-.h2 { @apply text-2xl font-semibold; }
-.copy { @apply text-neutral-800; }
-.card { @apply rounded-2xl border p-5 bg-white; }
-.grid3 { @apply grid md:grid-cols-3 gap-6; }
-.fadebg { @apply bg-radial-fade; }
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background-color: #f6f8fc;
+  color: #0e1524;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 300;
+}
+
+::selection {
+  background: #2f6db0;
+  color: #ffffff;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reserved for headline treatment; kept subtle on the light canvas */
+.text-glow {
+  text-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

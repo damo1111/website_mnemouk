@@ -1,10 +1,43 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html","./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: { ink: "#0a0a0a" },
-      backgroundImage: { 'radial-fade': 'radial-gradient(1200px 400px at 50% 0%, rgba(0,0,0,0.06), rgba(0,0,0,0))' }
-    }
+      colors: {
+        bg: "#F6F8FC",
+        surface: "#FFFFFF",
+        border: "#E3E9F2",
+        "border-light": "#D2DBEA",
+        text: "#0E1524",
+        muted: "#5B6884",
+        blue: "#2F6DB0",
+        "blue-dim": "#7EA8D8",
+        purple: "#6A5AD1",
+        signal: "#0E9E86",
+      },
+      fontFamily: {
+        display: ["Fraunces", "Georgia", "serif"],
+        body: ["Inter", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      letterSpacing: {
+        widest: "0.2em",
+      },
+      animation: {
+        "signal-pulse": "signal 3s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
+      },
+      keyframes: {
+        signal: {
+          "0%, 100%": { opacity: "0.4", transform: "scaleX(1)" },
+          "50%": { opacity: "1", transform: "scaleX(1.02)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
