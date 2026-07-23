@@ -6,6 +6,7 @@ import Hero from "./components/sections/Hero";
 import Problem from "./components/sections/Problem";
 import Products from "./components/sections/Products";
 import Technology from "./components/sections/Technology";
+import Demo from "./components/sections/Demo";
 import Investor from "./components/sections/Investor";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
@@ -24,6 +25,7 @@ export default function MnemoSite() {
         <Problem />
         <Products />
         <Technology />
+        <Demo />
         <Investor />
         <Contact />
       </main>
