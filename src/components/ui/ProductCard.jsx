@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Tag from "./Tag";
 import { cn } from "../../lib/utils";
 
@@ -74,18 +73,14 @@ export default function ProductCard({ product }) {
       </ul>
 
       <p className="mt-7 font-mono text-[11px] text-muted">{product.detail}</p>
-      <a
-        href={product.href}
-        target="_blank"
-        rel="noreferrer"
-        className="group mt-4 inline-flex items-center gap-2 font-body text-sm text-blue no-underline"
-      >
-        {product.linkLabel}
-        <ArrowRight
-          size={15}
-          className="transition-transform duration-300 group-hover:translate-x-1"
+      <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-border px-3.5 py-1.5 font-mono text-[10px] tracking-widest text-muted">
+        <span
+          aria-hidden="true"
+          className="h-1.5 w-1.5 rounded-full"
+          style={{ background: product.accent }}
         />
-      </a>
+        PRIVATE BETA
+      </span>
     </div>
   );
 
