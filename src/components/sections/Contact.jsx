@@ -19,10 +19,10 @@ export default function Contact() {
         </p>
         <div className="mt-8">
           <a
-            href="mailto:david@moritznet.com"
+            href="mailto:info@mnemolabs.co"
             className="group relative inline-block font-mono text-sm text-blue no-underline"
           >
-            david@moritznet.com
+            info@mnemolabs.co
             <span className="absolute -bottom-1 left-0 h-px w-0 bg-blue transition-all duration-300 group-hover:w-full" />
           </a>
         </div>

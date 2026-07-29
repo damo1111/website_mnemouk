@@ -4,25 +4,39 @@ import { ArrowRight } from "lucide-react";
 import Tag from "./Tag";
 import { cn } from "../../lib/utils";
 
-function Mockup({ gradient, accent, name }) {
+const reveal = {
+  hidden: { opacity: 0, y: 28 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 110, damping: 18 },
+  },
+};
+
+function AppFlow({ product }) {
   return (
-    <div
-      className="relative flex min-h-[300px] flex-1 items-center justify-center overflow-hidden rounded-xl border border-border"
-      style={{ background: gradient }}
-    >
-      {/* Placeholder device silhouette until a screengrab is dropped in */}
+    <div className="relative flex-1">
+      {/* soft accent glow behind the device */}
       <div
-        className="h-[78%] w-[46%] max-w-[220px] rounded-[2rem] border"
-        style={{ borderColor: `${accent}55`, boxShadow: `0 0 60px ${accent}22` }}
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-0 rounded-[2rem] blur-2xl"
+        style={{ background: `radial-gradient(60% 60% at 50% 40%, ${product.accent}22, transparent 70%)` }}
+      />
+      <div
+        className="relative mx-auto w-full max-w-[300px] overflow-hidden rounded-[2rem] border shadow-[0_30px_60px_-30px_rgba(20,30,60,0.35)]"
+        style={{ borderColor: `${product.accent}40` }}
       >
-        <div
-          className="mx-auto mt-4 h-1 w-10 rounded-full"
-          style={{ background: `${accent}66` }}
+        <video
+          className="block aspect-[9/16] w-full object-cover"
+          src={product.video}
+          poster={product.poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
         />
       </div>
-      <span className="pointer-events-none absolute bottom-4 right-4 font-mono text-[10px] tracking-widest text-text/30">
-        {name.toUpperCase()}
-      </span>
     </div>
   );
 }
@@ -30,23 +44,41 @@ function Mockup({ gradient, accent, name }) {
 export default function ProductCard({ product }) {
   const imageLeft = product.imageSide === "left";
 
-  const media = <Mockup gradient={product.gradient} accent={product.accent} name={product.name} />;
-
   const copy = (
     <div className="flex flex-1 flex-col items-start justify-center">
       <Tag>{product.tag}</Tag>
       <h3 className="mt-6 font-display text-4xl font-light tracking-tight text-text">
         {product.name}
       </h3>
-      <p className="mt-4 max-w-[440px] font-body text-base leading-relaxed text-muted">
+      <p className="mt-3 font-display text-xl font-light tracking-tight text-blue">
+        {product.tagline}
+      </p>
+      <p className="mt-5 max-w-[460px] font-body text-base leading-relaxed text-muted">
         {product.description}
       </p>
-      <p className="mt-6 font-mono text-[11px] text-muted">{product.detail}</p>
+
+      <ul className="mt-7 grid w-full max-w-[460px] gap-4 sm:grid-cols-1">
+        {product.features.map((f) => (
+          <li key={f.title} className="flex gap-3">
+            <span
+              aria-hidden="true"
+              className="mt-1.5 h-1.5 w-1.5 flex-none rounded-full"
+              style={{ background: product.accent }}
+            />
+            <span className="font-body text-sm leading-relaxed text-muted">
+              <span className="font-medium text-text">{f.title}.</span>{" "}
+              {f.description}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <p className="mt-7 font-mono text-[11px] text-muted">{product.detail}</p>
       <a
         href={product.href}
         target="_blank"
         rel="noreferrer"
-        className="group mt-6 inline-flex items-center gap-2 font-body text-sm text-blue no-underline"
+        className="group mt-4 inline-flex items-center gap-2 font-body text-sm text-blue no-underline"
       >
         {product.linkLabel}
         <ArrowRight
@@ -59,17 +91,17 @@ export default function ProductCard({ product }) {
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 32 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.25 }}
+      variants={reveal}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
       className={cn(
-        "flex flex-col gap-10 rounded-2xl border border-border bg-surface p-8 md:min-h-[480px] md:p-16",
+        "flex flex-col gap-10 rounded-2xl border border-border bg-surface p-8 md:min-h-[480px] md:items-center md:p-16",
         imageLeft ? "md:flex-row-reverse" : "md:flex-row"
       )}
     >
       {copy}
-      {media}
+      <AppFlow product={product} />
     </motion.article>
   );
 }

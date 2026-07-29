@@ -35,10 +35,10 @@ export default function Investor() {
             development across iOS, watchOS, and visionOS.
           </p>
           <a
-            href="mailto:david@moritznet.com?subject=Mnemo%20investor%20deck"
+            href="mailto:info@mnemolabs.co?subject=Mnemo%20investor%20deck"
             className="group mt-8 inline-flex items-center gap-2 font-body text-sm text-blue no-underline"
           >
-            Request investor deck — david@moritznet.com
+            Request investor deck — info@mnemolabs.co
             <ArrowRight
               size={15}
               className="transition-transform duration-300 group-hover:translate-x-1"

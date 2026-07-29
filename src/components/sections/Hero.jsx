@@ -11,7 +11,11 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 120, damping: 18 },
+  },
 };
 
 export default function Hero() {
@@ -20,6 +24,18 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden"
     >
+      {/* Ambient signal glow behind the headline */}
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-[38%] top-[42%] h-[520px] w-[680px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(126,168,216,0.20) 0%, rgba(126,168,216,0) 68%)",
+        }}
+        animate={{ opacity: [0.6, 1, 0.6], scale: [1, 1.08, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      />
+
       {/* Signature waveform, vertically centred behind the content */}
       <div className="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2">
         <SignalWave className="opacity-90" />
