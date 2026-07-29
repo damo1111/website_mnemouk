@@ -32,11 +32,31 @@ export default function Nav() {
       )}
     >
       <nav className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 md:px-10">
-        <a
-          href="#top"
-          className="font-body text-sm tracking-widest text-blue no-underline"
-        >
-          MNEMO
+        <a href="#top" className="flex items-center gap-2 no-underline">
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 100 100"
+            fill="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="mnemoPulse" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stopColor="#2F6DB0" />
+                <stop offset="1" stopColor="#0E9E86" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M8 54 H34 L46 28 L58 74 L66 54 H92"
+              stroke="url(#mnemoPulse)"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span className="font-body text-sm tracking-widest text-blue">
+            MNEMO
+          </span>
         </a>
         <div className="flex items-center gap-6 md:gap-9">
           {LINKS.map((link) => (
