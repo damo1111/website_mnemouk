@@ -1,33 +1,12 @@
 import React from "react";
 
-// A phone drawn in CSS around a real screen from one of our apps, ported from
-// the eend sites' Phone (body, rim, side buttons, Dynamic Island, a 9:41
-// status bar in the screen's own top colour, home bar). The screens are
-// captured without a system status bar, so the frame adds one, and the screen
-// is shown whole at the phone's width: nothing is cropped.
-
-export const SHOTS = {
-  bpToday: {
-    src: "/screens/bodyproof/today.webp", w: 780, h: 1688, top: "#F3F1EB",
-    alt: "BodyProof, Today: the day so far in one sentence, small rings for food, HRV, doses and the alcohol free run, then the doses taken",
-  },
-  bpHrv: {
-    src: "/screens/bodyproof/hrv.webp", w: 780, h: 1688, top: "#F3F1EF",
-    alt: "BodyProof, heart rate variability balanced across devices: this month's nights against the usual band, quit day marked",
-  },
-  bpSober: {
-    src: "/screens/bodyproof/sober.webp", w: 780, h: 1688, top: "#F3F1EB",
-    alt: "BodyProof, Alcohol free: day 7, the run, the days in all and the longest run",
-  },
-  bpMeds: {
-    src: "/screens/bodyproof/meds.webp", w: 780, h: 1688, top: "#F3F1EF",
-    alt: "BodyProof, Medications: a pill a dose, 14 of 14 doses taken, and the notes kept beside them",
-  },
-  susanToday: {
-    src: "/screens/susan/today.webp", w: 296, h: 628, top: "#F3F2F5",
-    alt: "Ministry of Susan, Today, with demo data: today's visit, Quick add by receipt, voice, photo or file, and recent moments",
-  },
-};
+// A phone drawn in CSS around a real screen from one of our apps, after the
+// eend sites' Phone, with a thin iPhone bezel: the body's padding is under 2%
+// of its width, a 1px light rim, and the screen's corner is the body's corner
+// less that padding. The screens are captured without a system status bar,
+// so the frame adds one (9:41, signal, wi-fi, battery) in the screen's own top
+// colour, with the Dynamic Island and the home bar. The screen is shown whole
+// at the phone's width: nothing is cropped.
 
 function StatusBar() {
   return (
@@ -42,35 +21,41 @@ function StatusBar() {
   );
 }
 
-// With `stack`, several screens share one frame and only `active` shows.
+// With `stack`, several screens share one frame and only `active` shows. The
+// first screen sets the height; the rest sit over it.
 export default function Phone({ shot, stack, active = 0, eager = false, className = "" }) {
   const shots = stack ?? [shot];
   const first = shots[0];
   return (
-    <div className={`ph ${className}`} style={{ "--ph-top": first.top }}>
-      <span className="ph-btn ph-act" aria-hidden="true" />
-      <span className="ph-btn ph-vup" aria-hidden="true" />
-      <span className="ph-btn ph-vdn" aria-hidden="true" />
-      <span className="ph-btn ph-pwr" aria-hidden="true" />
-      <div className="ph-glass">
-        <StatusBar />
-        <div className="ph-screen" style={{ aspectRatio: `${first.w} / ${first.h}` }}>
-          {shots.map((s, i) => (
-            <img
-              key={s.src}
-              src={s.src}
-              width={s.w}
-              height={s.h}
-              alt={stack && i !== active ? "" : s.alt}
-              aria-hidden={stack && i !== active ? true : undefined}
-              loading={eager ? "eager" : "lazy"}
-              decoding="async"
-              className={stack ? (i === active ? "on" : i < active ? "past" : "") : ""}
-            />
-          ))}
+    <div className={`ph ${className}`} style={{ "--ph-top": shots[active]?.top ?? first.top }}>
+      <div className="ph-body">
+        <span className="ph-btn ph-act" aria-hidden="true" />
+        <span className="ph-btn ph-vup" aria-hidden="true" />
+        <span className="ph-btn ph-vdn" aria-hidden="true" />
+        <span className="ph-btn ph-pwr" aria-hidden="true" />
+        <div className="ph-glass">
+          <StatusBar />
+          <div
+            className={`ph-screen${stack ? " is-stack" : ""}`}
+            style={{ aspectRatio: `${first.w} / ${first.h}` }}
+          >
+            {shots.map((s, i) => (
+              <img
+                key={s.src}
+                src={s.src}
+                width={s.w}
+                height={s.h}
+                alt={stack && i !== active ? "" : s.alt}
+                aria-hidden={stack && i !== active ? true : undefined}
+                loading={eager ? "eager" : "lazy"}
+                decoding="async"
+                className={stack ? (i === active ? "on" : i < active ? "past" : "") : ""}
+              />
+            ))}
+          </div>
+          <span className="ph-island" aria-hidden="true" />
+          <span className="ph-home" aria-hidden="true" />
         </div>
-        <span className="ph-island" aria-hidden="true" />
-        <span className="ph-home" aria-hidden="true" />
       </div>
     </div>
   );

@@ -53,3 +53,17 @@ export function MnemoMark({ size = 30 }) {
     />
   );
 }
+
+// BodyProof's app icon as it ships: the olive tile with the cream B and the
+// neon wedge (the app's latest build, exported at 512 and kept at 192 here).
+export function BodyProofIcon({ size = 56 }) {
+  return (
+    <img
+      src="/icons/bodyproof-192.png"
+      width={size}
+      height={size}
+      alt="BodyProof"
+      style={{ display: "block", borderRadius: "22.4%", boxShadow: "0 0 0 1px rgba(22,23,29,.08), 0 8px 18px -10px rgba(22,23,29,.45)" }}
+    />
+  );
+}

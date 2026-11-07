@@ -1,9 +1,11 @@
 import React from "react";
-import Phone, { SHOTS } from "./components/Phone";
+import Phone from "./components/Phone";
+import CyclingPhone from "./components/CyclingPhone";
+import { BODYPROOF_SCREENS, SUSAN_HERO, SUSAN_SCREENS } from "./data/screens";
 import Reveal from "./components/Reveal";
 import RangeGauge from "./components/RangeGauge";
 import BodyProofSteps from "./components/BodyProofSteps";
-import { BodyProofMark, BodyProofWordmark, MnemoMark } from "./components/Marks";
+import { BodyProofIcon, BodyProofWordmark, MnemoMark } from "./components/Marks";
 
 // mnemolabs.co, "Field Notes": the studio's page as a lab notebook. Paper,
 // ink, a serif for what we think, mono for figures and captions, and the two
@@ -58,14 +60,8 @@ function Hero() {
           </div>
         </div>
         <div className="hero-art">
-          <figure className="hero-fig f1">
-            <Phone shot={SHOTS.bpToday} eager />
-            <figcaption><span className="fig-no">Fig. 1</span> BodyProof, Today</figcaption>
-          </figure>
-          <figure className="hero-fig f2">
-            <Phone shot={SHOTS.susanToday} eager />
-            <figcaption><span className="fig-no">Fig. 2</span> Ministry of Susan, Today. Demo, fictional data</figcaption>
-          </figure>
+          <CyclingPhone className="hero-fig f1" screens={BODYPROOF_SCREENS} fig="1" app="BodyProof" eager />
+          <CyclingPhone className="hero-fig f2" screens={SUSAN_HERO} fig="2" app="Ministry of Susan" offset={1600} eager />
         </div>
       </div>
     </section>
@@ -117,7 +113,7 @@ function BodyProof() {
         <Reveal as="p" className="sec-no">§ 2</Reveal>
         <Reveal className="bp-head">
           <div className="bp-brand">
-            <BodyProofMark size={44} title="BodyProof" />
+            <BodyProofIcon size={56} />
             <BodyProofWordmark />
           </div>
           <h2 id="bp-h" className="sec-h">Your health, read honestly.</h2>
@@ -160,42 +156,36 @@ function BodyProof() {
   );
 }
 
-const SUSAN = [
-  { t: "Everyone gets their own view.", d: "Magic link sign in, no passwords. The admin sees everything, carers see care and their own pay, family get a warm read only window." },
-  { t: "Quick add.", d: "Speak it, snap it or paste it: a dictated note, a receipt, a rota screenshot. We file it in the right place." },
-  { t: "Tracked to done.", d: "Medicines, supplies and requests stay visible and assigned until someone marks them done." },
-];
-
 function Susan() {
   return (
     <section className="sec susan" id="susan" aria-labelledby="susan-h">
-      <div className="wrap susan-in">
-        <Reveal className="susan-art">
-          <figure>
-            <Phone shot={SHOTS.susanToday} />
-            <figcaption><span className="fig-no">Fig. 4</span> Ministry of Susan, Today. A still from our demo, with fictional data.</figcaption>
-          </figure>
-        </Reveal>
-        <div className="susan-copy">
-          <Reveal as="p" className="sec-no">§ 3</Reveal>
-          <Reveal>
-            <p className="tag">Ministry of Susan <span className="pill"><span className="dot sage" />Private beta</span></p>
-            <h2 id="susan-h" className="sec-h">The care team, finally on the same page.</h2>
-            <p className="body">
-              For families looking after an older relative from a distance: the family and the carers in one record of visits, notes, medicines and requests.
-            </p>
-          </Reveal>
-          <ul className="susan-list">
-            {SUSAN.map((s, i) => (
-              <Reveal as="li" key={s.t} delay={i * 80}>
-                <b>{s.t}</b> {s.d}
-              </Reveal>
-            ))}
-          </ul>
-          <Reveal>
+      <div className="wrap">
+        <div className="susan-in">
+          <div className="susan-copy">
+            <Reveal as="p" className="sec-no">§ 3</Reveal>
+            <Reveal>
+              <p className="tag">Ministry of Susan <span className="pill"><span className="dot sage" />Private beta</span></p>
+              <h2 id="susan-h" className="sec-h">The care team, finally on the same page.</h2>
+              <p className="body">
+                For families looking after an older relative from a distance: the family and the carers in one record of visits, notes, medicines and requests. Everyone gets their own view. Magic link sign in, no passwords. The admin sees everything, carers see care and their own pay, family get a warm read only window.
+              </p>
+            </Reveal>
+          </div>
+          <Reveal className="susan-cta">
             <a className="btn btn-line" href={`mailto:${EMAIL}?subject=Ministry%20of%20Susan`}>Ask us about Ministry of Susan</a>
           </Reveal>
         </div>
+        <ol className="susan-grid">
+          {SUSAN_SCREENS.map((s, i) => (
+            <Reveal as="li" key={s.shot.src} delay={i * 90}>
+              <Phone shot={s.shot} />
+              <p className="callout static">
+                <span className="fig-no">Fig. 5{String.fromCharCode(97 + i)}</span>
+                <span className="callout-body"><b>{s.label}</b><span>{s.line}</span></span>
+              </p>
+            </Reveal>
+          ))}
+        </ol>
       </div>
     </section>
   );
@@ -240,7 +230,7 @@ function Footer() {
           <li><a href={LINKEDIN} target="_blank" rel="noreferrer">LinkedIn</a></li>
           <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
         </ul>
-        <p className="foot-c">© {new Date().getFullYear()} Mnemo Labs</p>
+        <p className="foot-c">© {new Date().getFullYear()} Mnemo Labs, United Kingdom</p>
       </div>
     </footer>
   );

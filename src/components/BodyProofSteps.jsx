@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import Phone, { SHOTS } from "./Phone";
+import Phone from "./Phone";
+import { BODYPROOF_SCREENS } from "../data/screens";
+
+const [TODAY, HRV, SOBER, MEDS] = BODYPROOF_SCREENS.map((x) => x.shot);
 
 // BodyProof's screens, one at a time: on a wide screen the phone is pinned and
 // the screen changes as each note scrolls past its middle; on a phone each note
@@ -7,26 +10,26 @@ import Phone, { SHOTS } from "./Phone";
 
 const STEPS = [
   {
-    shot: SHOTS.bpToday,
-    fig: "2a",
+    shot: TODAY,
+    fig: "4a",
     t: "Today",
     d: "The day so far in one sentence, then small rings for food, HRV, doses and the alcohol free run. Every figure opens its own page.",
   },
   {
-    shot: SHOTS.bpHrv,
-    fig: "2b",
+    shot: HRV,
+    fig: "4b",
     t: "Heart rate variability, balanced",
     d: "Each watch is set against the others on the nights they share. Your usual is drawn as a band, never a goal line, and a hand off with no shared nights is drawn as a break.",
   },
   {
-    shot: SHOTS.bpSober,
-    fig: "2c",
+    shot: SOBER,
+    fig: "4c",
     t: "Alcohol free",
     d: "The run, the days in all and the longest run. A drink restarts the run, nothing more. Then what your nights have done since quit day, said only once they have earned it.",
   },
   {
-    shot: SHOTS.bpMeds,
-    fig: "2d",
+    shot: MEDS,
+    fig: "4d",
     t: "Medications",
     d: "A pill a dose, the notes kept beside them, and in time what your own nights did after a dose and without one.",
   },
