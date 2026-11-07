@@ -12,7 +12,7 @@ import { BodyProofIcon, BodyProofWordmark, MnemoMark } from "./components/Marks"
 // apps as real screens in real phones, captioned like figures.
 //
 // Claims stay to what each app does today (BodyProof: damo1111/davanity
-// CLAUDE.md; Ministry of Susan: the description this repo already carried).
+// CLAUDE.md; The Ministry: the description this repo already carried).
 // Nothing here says where the company is registered, its tax status, or any
 // platform the apps do not run on. Copy: UK English, no dashes as punctuation,
 // the apps speak as "we", people are never "users".
@@ -33,7 +33,7 @@ function Nav() {
         </a>
         <nav className="nav-links" aria-label="Main">
           <a className="hide-s" href="#bodyproof">BodyProof</a>
-          <a className="hide-s" href="#susan">Ministry of Susan</a>
+          <a className="hide-s" href="#susan">The Ministry</a>
           <a className="nav-cta" href="#contact">Contact</a>
         </nav>
       </div>
@@ -52,7 +52,7 @@ function Hero() {
             <em>Starting with yourself.</em>
           </h1>
           <p className="lede">
-            We make two apps. <b>BodyProof</b> reads your health across every device you wear and says only what your nights have earned. <b>Ministry of Susan</b> keeps a family&apos;s care of an older relative in one record, with each person seeing their part.
+            We make two apps. <b>BodyProof</b> reads your health across every device you wear and says only what your nights have earned. <b>The Ministry</b> keeps a family&apos;s care of an older relative in one record, with each person seeing their part.
           </p>
           <div className="ctas">
             <a className="btn btn-ink" href={BODYPROOF_JOIN}>Join the BodyProof beta</a>
@@ -61,7 +61,7 @@ function Hero() {
         </div>
         <div className="hero-art">
           <CyclingPhone className="hero-fig f1" screens={BODYPROOF_SCREENS} fig="1" app="BodyProof" eager />
-          <CyclingPhone className="hero-fig f2" screens={SUSAN_HERO} fig="2" app="Ministry of Susan" offset={1600} eager />
+          <CyclingPhone className="hero-fig f2" screens={SUSAN_HERO} fig="2" app="The Ministry" offset={1600} eager />
         </div>
       </div>
     </section>
@@ -82,7 +82,7 @@ const RULES = [
   {
     n: "03",
     t: "Each person sees their part.",
-    d: "In Ministry of Susan the family admin sees everything, carers see the care and their own pay, and family get a warm window in.",
+    d: "In The Ministry the family admin sees everything, carers see the care and their own pay, and family get a warm window in.",
   },
 ];
 
@@ -164,7 +164,7 @@ function Susan() {
           <div className="susan-copy">
             <Reveal as="p" className="sec-no">§ 3</Reveal>
             <Reveal>
-              <p className="tag">Ministry of Susan <span className="pill"><span className="dot sage" />Private beta</span></p>
+              <p className="tag">The Ministry <span className="pill"><span className="dot sage" />Private beta</span></p>
               <h2 id="susan-h" className="sec-h">The care team, finally on the same page.</h2>
               <p className="body">
                 For families looking after an older relative from a distance: the family and the carers in one record of visits, notes, medicines and requests. Everyone gets their own view. Magic link sign in, no passwords. The admin sees everything, carers see care and their own pay, family get a warm read only window.
@@ -172,7 +172,7 @@ function Susan() {
             </Reveal>
           </div>
           <Reveal className="susan-cta">
-            <a className="btn btn-line" href={`mailto:${EMAIL}?subject=Ministry%20of%20Susan`}>Ask us about Ministry of Susan</a>
+            <a className="btn btn-line" href={`mailto:${EMAIL}?subject=The%20Ministry`}>Ask us about The Ministry</a>
           </Reveal>
         </div>
         <ol className="susan-grid">

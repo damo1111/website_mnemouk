@@ -3,7 +3,7 @@
 // the hero cycles through them and the chapters lay them out, in this order.
 //
 // BodyProof's screens are the app's mock build (synthetic data), copied from
-// eend.app's public/bodyproof/screens. Ministry of Susan's are below.
+// eend.app's public/bodyproof/screens. The Ministry's are below.
 
 const bp = (name, alt) => ({ src: `/screens/bodyproof/${name}.webp`, w: 780, h: 1688, top: "#F3F1EC", alt });
 
@@ -30,7 +30,7 @@ export const BODYPROOF_SCREENS = [
   },
 ];
 
-// Ministry of Susan, captured from demo.html in damo1111/ministry_of_susan
+// The Ministry, captured from demo.html in damo1111/ministry_of_susan
 // (commit b868db8) at 390 x 844 and kept at 780 x 1688. That household is
 // called Ministry of Margaret; its people, medicines and photos are made up.
 // Never capture the real app (index.html).
@@ -40,7 +40,7 @@ const ms = (name, top, alt) => ({ src: `/screens/susan/${name}.webp`, w: 780, h:
 
 export const SUSAN_SCREENS = [
   {
-    shot: ms("home", PAPER, "Ministry of Susan home: Good evening Michael, then Margaret today: out 1 km from home, her tablets and meals ticked by a carer, things to keep an eye on, the last visit, the next one and errands"),
+    shot: ms("home", PAPER, "The Ministry home: Good evening Michael, then Margaret today: out 1 km from home, her tablets and meals ticked by a carer, things to keep an eye on, the last visit, the next one and errands"),
     label: "Margaret today, at a glance",
     line: "Where she is, what she ate, how she was, who came and who is next.",
   },

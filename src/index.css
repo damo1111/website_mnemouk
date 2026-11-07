@@ -2,7 +2,7 @@
 
 /* mnemolabs.co, "Field Notes". Paper and ink, a serif for what we think, Geist
    for reading, Geist Mono for figures and captions. Each app keeps its own
-   colour: BodyProof olive (neon only on ink), Ministry of Susan sage. */
+   colour: BodyProof olive (neon only on ink), The Ministry sage. */
 
 :root {
   --paper: #F4F1EA;
@@ -208,7 +208,7 @@ img { max-width: 100%; }
 .fine { margin: 10px 0 0; font-size: 14px; color: var(--graphite); }
 .fine a { text-underline-offset: 3px; }
 
-/* § 3 Ministry of Susan */
+/* § 3 The Ministry */
 .susan-in { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px; }
 .susan-copy { max-width: 720px; }
 .tag { margin: 0 0 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-family: var(--mono); font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--sage); }
