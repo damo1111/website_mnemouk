@@ -45,19 +45,9 @@ export const SUSAN_SCREENS = [
     line: "Where she is, what she ate, how she was, who came and who is next.",
   },
   {
-    shot: ms("where", SCRIM, "Where's Margaret: a map with her tracker, out 1 km from home, the tracker's battery, and her recent trips"),
-    label: "Where she is, and her recent trips",
-    line: "A map from her tracker, its battery, and her trips out.",
-  },
-  {
     shot: ms("inbox", PAPER, "Inbox: everything waiting on you, most urgent first, with things to buy, an invoice to approve and pay, and a request being chased"),
     label: "What needs you",
     line: "Everything waiting on you, most urgent first: to buy, to pay, to chase.",
-  },
-  {
-    shot: ms("add", SCRIM, "The Add sheet: photo or video, just say it, care note, expense, request, post, message the team, appointment, bill and rota"),
-    label: "Add anything",
-    line: "A photo or video, or just say it and we work out where it goes.",
   },
   {
     shot: ms("margaret", PAPER, "Margaret: how she is now, from the last three months of notes, a box to ask about her, and what to keep an eye on"),
@@ -65,31 +55,15 @@ export const SUSAN_SCREENS = [
     line: "A summary from the last three months of notes, and a box to ask about her.",
   },
   {
-    shot: ms("doses", PAPER, "Last 14 days: doses taken, a square a day for tablets, food and mood, ticked at the end of each visit"),
-    label: "The last fortnight in squares",
-    line: "Tablets, food and mood, ticked at the end of each visit.",
-  },
-  {
-    shot: ms("medicines", PAPER, "Medicines: a refill tracked from ordered to GP approved, ready to collect and collected, and the days left on each medicine"),
-    label: "Prescriptions, tracked",
-    line: "Days left on each medicine, and a refill from ordered to collected.",
-  },
-  {
     shot: ms("people", PAPER, "People: who to call if something is wrong, the admin with call, WhatsApp and email, and filters for carers, health and family"),
     label: "Everyone who helps",
     line: "Her GP, family and carers, one tap to call, WhatsApp or email.",
   },
-  {
-    shot: ms("schedule", PAPER, "Schedule: open shifts for carers to claim, the week's visits and hours, and what is next up"),
-    label: "Visits and open shifts",
-    line: "Who is coming, and shifts for carers to claim.",
-  },
-  {
-    shot: ms("month", PAPER, "Margaret's November: the month in brief, then photos, with Print"),
-    label: "Her month, on one page",
-    line: "The month in brief and its photos, to read or print.",
-  },
 ];
 
 // The hero's Fig. 2 cycles through these.
-export const SUSAN_HERO = SUSAN_SCREENS.slice(0, 4);
+// Before launch (David, 7 Nov 2026 UTC: "dont want to reveal all or be copied
+// before we launch"): four screens in the hero and no grid, the same trim as
+// theministry.care. The other captures are deleted from public/.
+const KEEP = ["home", "inbox", "margaret", "people"];
+export const SUSAN_HERO = KEEP.map((k) => SUSAN_SCREENS.find((s) => s.shot.src.includes(`/${k}.`))).filter(Boolean);

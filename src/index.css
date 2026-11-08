@@ -286,3 +286,4 @@ img { max-width: 100%; }
   .is-stack > img, .is-stack > img.on, .is-stack > img.past { transform: none; transition: none; }
   .callout-body { animation: none; }
 }
+.ministry-mark { display: block; margin-bottom: 18px; } .susan-cta { display: flex; flex-direction: column; align-items: flex-start; }

@@ -1,7 +1,8 @@
 import React from "react";
-import Phone from "./components/Phone";
 import CyclingPhone from "./components/CyclingPhone";
-import { BODYPROOF_SCREENS, SUSAN_HERO, SUSAN_SCREENS } from "./data/screens";
+import { BODYPROOF_SCREENS, SUSAN_HERO } from "./data/screens";
+
+const MINISTRY = "https://www.theministry.care";
 import Reveal from "./components/Reveal";
 import RangeGauge from "./components/RangeGauge";
 import BodyProofSteps from "./components/BodyProofSteps";
@@ -52,7 +53,7 @@ function Hero() {
             <em>Starting with yourself.</em>
           </h1>
           <p className="lede">
-            We make two apps. <b>BodyProof</b> reads your health across every device you wear and says only what your nights have earned. <b>The Ministry</b> keeps a family&apos;s care of an older relative in one record, with each person seeing their part.
+            We make two apps. <b>BodyProof</b> reads your health across every device you wear and says only what your nights have earned. <b>The Ministry</b> runs the care of someone you love, from anywhere: the people, the pills and the paperwork, with each person seeing their part.
           </p>
           <div className="ctas">
             <a className="btn btn-ink" href={BODYPROOF_JOIN}>Join the BodyProof beta</a>
@@ -156,6 +157,18 @@ function BodyProof() {
   );
 }
 
+function MinistryMark({ size = 64 }) {
+  // The Ministry's mark (website_eend.app src/app/ministry/_parts/brand.tsx):
+  // the person cared for as a gold dot, the day's visits as four arcs round them.
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="16" fill="#1F3A30" />
+      <path d="M40.45 16.11A18 18 0 0 1 49.82 34.51 M46.56 42.58A18 18 0 0 1 31.37 49.99 M23.00 47.59A18 18 0 0 1 14.70 27.04 M19.05 19.50A18 18 0 0 1 31.37 14.01" fill="none" stroke="#F5F1E8" strokeWidth="6" strokeLinecap="round" />
+      <circle cx="32" cy="32" r="7.5" fill="#E2B653" />
+    </svg>
+  );
+}
+
 function Susan() {
   return (
     <section className="sec susan" id="susan" aria-labelledby="susan-h">
@@ -167,25 +180,15 @@ function Susan() {
               <p className="tag">The Ministry <span className="pill"><span className="dot sage" />Private beta</span></p>
               <h2 id="susan-h" className="sec-h">The care team, finally on the same page.</h2>
               <p className="body">
-                For families looking after an older relative from a distance: the family and the carers in one record of visits, notes, medicines and requests. Everyone gets their own view. Magic link sign in, no passwords. The admin sees everything, carers see care and their own pay, family get a warm read only window.
+                For anyone caring for someone at home, and for the care providers who visit: the family and every carer in one record of visits, notes, medicines and money. Everyone gets their own view. The admin sees everything, carers see care and their own pay, family get a warm window in. Opening to a few more families in the UK and Australia.
               </p>
             </Reveal>
           </div>
           <Reveal className="susan-cta">
-            <a className="btn btn-line" href={`mailto:${EMAIL}?subject=The%20Ministry`}>Ask us about The Ministry</a>
+            <a className="ministry-mark" href={MINISTRY} aria-label="The Ministry"><MinistryMark size={88} /></a>
+            <a className="btn btn-line" href={MINISTRY}>theministry.care <span aria-hidden="true">→</span></a>
           </Reveal>
         </div>
-        <ol className="susan-grid">
-          {SUSAN_SCREENS.map((s, i) => (
-            <Reveal as="li" key={s.shot.src} delay={i * 90}>
-              <Phone shot={s.shot} />
-              <p className="callout static">
-                <span className="fig-no">Fig. 5{String.fromCharCode(97 + i)}</span>
-                <span className="callout-body"><b>{s.label}</b><span>{s.line}</span></span>
-              </p>
-            </Reveal>
-          ))}
-        </ol>
       </div>
     </section>
   );
