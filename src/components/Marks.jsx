@@ -40,17 +40,16 @@ export function BodyProofWordmark() {
   );
 }
 
-// The Mnemo M, David's artwork (public/mnemo-mark-20251102.png).
+// The Mnemo mark. The earlier M (David's artwork, mnemo-mark-20251102.png) is in git history.
 export function MnemoMark({ size = 30 }) {
+  // M1, The Signal (David's pick, 8 Nov 2026 UTC): an M drawn as one heartbeat
+  // line on ink, the neon point where it peaks.
   return (
-    <img
-      src="/mnemo-mark-20251102.png"
-      width={Math.round((size * 711) / 666)}
-      height={size}
-      alt=""
-      aria-hidden="true"
-      style={{ display: "block" }}
-    />
+    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" style={{ display: "block" }}>
+      <rect width="64" height="64" rx="16" fill="#0F1114" />
+      <path d="M12 44 L18 44 L22 22 L28 40 L32 30 L36 40 L42 22 L46 44 L52 44" fill="none" stroke="#F4F1EA" strokeWidth="3.6" strokeLinejoin="round" strokeLinecap="round" />
+      <circle cx="32" cy="30" r="3.2" fill="#CFE48A" />
+    </svg>
   );
 }
 
