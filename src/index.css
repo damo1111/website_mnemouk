@@ -287,3 +287,46 @@ img { max-width: 100%; }
   .callout-body { animation: none; }
 }
 .ministry-mark { display: block; margin-bottom: 18px; } .susan-cta { display: flex; flex-direction: column; align-items: flex-start; }
+
+/* § 1 The lab: ink, a faint field of stars and a slow drift, the figures
+   drawn in the paper colour. Motion is transform and opacity only, and stops
+   under reduced motion. */
+.lab { position: relative; overflow: hidden; background: #0F1114; color: var(--paper); }
+.lab-sky { position: absolute; inset: -20%; background:
+  radial-gradient(1px 1px at 12% 18%, rgba(244,241,234,.55), transparent 60%),
+  radial-gradient(1px 1px at 68% 12%, rgba(244,241,234,.4), transparent 60%),
+  radial-gradient(1.5px 1.5px at 84% 64%, rgba(244,241,234,.5), transparent 60%),
+  radial-gradient(1px 1px at 32% 76%, rgba(244,241,234,.35), transparent 60%),
+  radial-gradient(1px 1px at 52% 44%, rgba(244,241,234,.3), transparent 60%),
+  radial-gradient(1px 1px at 92% 28%, rgba(244,241,234,.45), transparent 60%),
+  radial-gradient(900px 520px at 78% 18%, rgba(224,247,106,.08), transparent 70%),
+  radial-gradient(800px 600px at 10% 90%, rgba(47,125,107,.16), transparent 70%);
+  animation: lab-drift 60s linear infinite alternate; }
+@keyframes lab-drift { to { transform: translate3d(-3%, 2%, 0) scale(1.04); } }
+.lab .wrap { position: relative; }
+.lab .sec-no.on-ink { color: var(--margin); }
+.lab .sec-h.on-ink { color: var(--paper); max-width: 18em; }
+.lab .sec-h em { color: #CFE48A; }
+.lab-lede { margin-top: 24px; max-width: 40em; font-size: 19px; line-height: 1.6; color: rgba(244,241,234,.72); }
+.lab-lines { list-style: none; margin: clamp(40px, 5vw, 64px) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
+.lab-lines li > div { height: 100%; padding: 24px 22px 26px; border-top: 1px solid rgba(244,241,234,.22); }
+.lab-k { display: flex; gap: 12px; align-items: baseline; font-family: var(--mono); font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: #CFE48A; }
+.lab-k span { color: rgba(244,241,234,.45); letter-spacing: .08em; }
+.lab-fig { display: block; width: 100%; height: 96px; margin: 22px 0 18px; color: rgba(244,241,234,.85); }
+.lab-lines h3 { font-family: var(--serif); font-weight: 400; font-size: 26px; line-height: 1.15; color: var(--paper); }
+.lab-lines p:not(.lab-k) { margin-top: 10px; font-size: 15.5px; line-height: 1.6; color: rgba(244,241,234,.66); }
+.lab .rv.in .pulse path, .lab .rv.in .spiral path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: lab-draw 2.6s var(--ease) .2s forwards; }
+@keyframes lab-draw { to { stroke-dashoffset: 0; } }
+.lab .web .node { fill: rgba(244,241,234,.8); animation: lab-twinkle 4s ease-in-out infinite; }
+.lab .web .core { fill: #CFE48A; animation: lab-twinkle 3s ease-in-out infinite; }
+@keyframes lab-twinkle { 50% { opacity: .35; } }
+.lab-hz { margin-top: clamp(44px, 6vw, 72px); padding-top: 26px; border-top: 1px dashed rgba(244,241,234,.25); }
+.lab-hz dl { margin: 18px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.lab-hz dt { font-family: var(--serif); font-size: 22px; color: var(--paper); }
+.lab-hz dd { margin: 6px 0 0; font-size: 14.5px; line-height: 1.55; color: rgba(244,241,234,.6); }
+@media (max-width: 960px) { .lab-lines { grid-template-columns: 1fr; } .lab-hz dl { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .lab-hz dl { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) {
+  .lab-sky, .lab .web .node, .lab .web .core { animation: none; }
+  .lab .rv.in .pulse path, .lab .rv.in .spiral path { animation: none; stroke-dashoffset: 0; }
+}

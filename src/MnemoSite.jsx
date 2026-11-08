@@ -4,6 +4,7 @@ import { BODYPROOF_SCREENS, SUSAN_HERO } from "./data/screens";
 
 const MINISTRY = "https://www.theministry.care";
 import Reveal from "./components/Reveal";
+import Lab from "./components/Lab";
 import RangeGauge from "./components/RangeGauge";
 import BodyProofSteps from "./components/BodyProofSteps";
 import { BodyProofIcon, BodyProofWordmark, MnemoMark } from "./components/Marks";
@@ -33,6 +34,7 @@ function Nav() {
           <span className="brand-wm">Mnemo Labs</span>
         </a>
         <nav className="nav-links" aria-label="Main">
+          <a className="hide-s" href="#lab">The lab</a>
           <a className="hide-s" href="#bodyproof">BodyProof</a>
           <a className="hide-s" href="#susan">The Ministry</a>
           <a className="nav-cta" href="#contact">Contact</a>
@@ -47,7 +49,7 @@ function Hero() {
     <section className="hero" id="top">
       <div className="wrap hero-in">
         <div className="hero-copy">
-          <p className="kicker">Mnemo Labs <span>Field notes</span></p>
+          <p className="kicker">Mnemo Labs <span>A lab for the human signal</span></p>
           <h1>
             Honest instruments for the people you look after.{" "}
             <em>Starting with yourself.</em>
@@ -91,7 +93,7 @@ function Rules() {
   return (
     <section className="sec rules" aria-labelledby="rules-h">
       <div className="wrap">
-        <Reveal as="p" className="sec-no">§ 1</Reveal>
+        <Reveal as="p" className="sec-no">§ 2</Reveal>
         <Reveal as="h2" id="rules-h" className="sec-h">What we hold to.</Reveal>
         <ol className="rule-list">
           {RULES.map((r, i) => (
@@ -111,7 +113,7 @@ function BodyProof() {
   return (
     <section className="sec bp" id="bodyproof" aria-labelledby="bp-h">
       <div className="wrap">
-        <Reveal as="p" className="sec-no">§ 2</Reveal>
+        <Reveal as="p" className="sec-no">§ 3</Reveal>
         <Reveal className="bp-head">
           <div className="bp-brand">
             <BodyProofIcon size={56} />
@@ -175,7 +177,7 @@ function Susan() {
       <div className="wrap">
         <div className="susan-in">
           <div className="susan-copy">
-            <Reveal as="p" className="sec-no">§ 3</Reveal>
+            <Reveal as="p" className="sec-no">§ 4</Reveal>
             <Reveal>
               <p className="tag">The Ministry <span className="pill"><span className="dot sage" />Private beta</span></p>
               <h2 id="susan-h" className="sec-h">The care team, finally on the same page.</h2>
@@ -198,7 +200,7 @@ function Contact() {
   return (
     <section className="sec contact" id="contact" aria-labelledby="contact-h">
       <div className="wrap contact-in">
-        <Reveal as="p" className="sec-no">§ 4</Reveal>
+        <Reveal as="p" className="sec-no">§ 5</Reveal>
         <Reveal as="h2" id="contact-h" className="sec-h">Write to us.</Reveal>
         <Reveal className="contact-grid">
           <div>
@@ -246,6 +248,7 @@ export default function MnemoSite() {
       <Nav />
       <main id="main">
         <Hero />
+        <Lab />
         <Rules />
         <BodyProof />
         <Susan />
