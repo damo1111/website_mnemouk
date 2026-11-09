@@ -236,6 +236,7 @@ function Footer() {
           <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
         </ul>
         <p className="foot-c">© {new Date().getFullYear()} Mnemo Labs, United Kingdom</p>
+        <p className="foot-c">This site counts visits with PostHog, hosted in the EU. No advertising cookies, nothing passed to advertisers.</p>
       </div>
     </footer>
   );
