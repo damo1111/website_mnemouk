@@ -135,7 +135,7 @@ function BodyProof() {
             <blockquote className="quote">
               &ldquo;Your Whoop reads 0.7 bpm lower than your Apple Watch on 267 shared nights; corrected.&rdquo;
             </blockquote>
-            <p className="quote-by">How BodyProof says it, from the founder&apos;s own record.</p>
+            <p className="quote-by">How BodyProof says it, from the developer&apos;s own record.</p>
           </Reveal>
           <Reveal className="bp-truth-art" delay={120}>
             <RangeGauge />
